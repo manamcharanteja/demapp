@@ -1,8 +1,7 @@
-tsx
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const CheckoutScreen: React.FC = () => {
+const CheckoutScreen = () => {
   const handlePurchase = () => {
     alert('Purchase completed!');
   };

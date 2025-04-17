@@ -1,4 +1,4 @@
-tsx
+
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { Product } from '../data/products';
@@ -42,11 +42,11 @@ const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({ route, naviga
 
   return (
     <View style={styles.container}>
-      <Image source={{ uri: product.imageUrl }} style={styles.image} />
+      <Image source={{ uri: product?.imageUrl }} style={styles.image} />
       <View style={styles.details}>
-        <Text style={styles.name}>{product.name}</Text>
-        <Text style={styles.description}>{product.description}</Text>
-        <Text style={styles.price}>${product.price.toFixed(2)}</Text>
+        <Text style={styles.name}>{product?.name}</Text>
+        <Text style={styles.description}>{product?.description}</Text>
+        <Text style={styles.price}>${product?.price.toFixed(2)}</Text>
       </View>
       <Animated.View style={{ transform: [{ scale }] }}>
         <TouchableOpacity

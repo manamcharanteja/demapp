@@ -13,6 +13,7 @@ import CartScreen from './src/components/CartScreen';
 import CheckoutScreen from './src/components/CheckoutScreen';
 import { CartProvider } from './src/hooks/useCart';
 import { RootStackParamList } from './src/types';
+import { StyleSheet } from 'react-native';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

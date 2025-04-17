@@ -1,11 +1,11 @@
-tsx
+
 import React from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Product } from '../../types';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../App';
-import products from '../../data/products';
+import { products } from '../data/products';
 
 interface ProductItemProps {
   product: Product;

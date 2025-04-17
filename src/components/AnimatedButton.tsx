@@ -1,4 +1,4 @@
-tsx
+
 import React, { useRef } from 'react';
 import { Animated, TouchableOpacity, Text, StyleSheet } from 'react-native';
 

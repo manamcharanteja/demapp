@@ -1,4 +1,4 @@
-tsx
+
 import React from 'react';
 import { View, Text, FlatList, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -36,7 +36,7 @@ const CartScreen: React.FC<CartScreenProps> = ({ cartItems }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Your Cart</Text>
-      {cartItems.length > 0 ? (
+      {cartItems?.length > 0 ? (
         <FlatList
           data={cartItems}
           renderItem={renderItem}
@@ -45,7 +45,7 @@ const CartScreen: React.FC<CartScreenProps> = ({ cartItems }) => {
       ) : (
         <Text style={styles.emptyCartText}>Your cart is empty.</Text>
       )}
-      <Button title="Go to Checkout" onPress={handleCheckout} disabled={cartItems.length === 0}/>
+      <Button title="Go to Checkout" onPress={handleCheckout} disabled={cartItems?.length === 0}/>
     </View>
   );
 };
